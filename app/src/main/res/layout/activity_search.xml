@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="My Favorites"
+                android:text="Search Movies"
                 android:textColor="@color/text_primary"
                 android:textSize="28sp"
                 android:textStyle="bold"/>
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your saved movies"
+                android:text="Find your favorite movies"
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp"/>
@@ -49,32 +49,46 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/emptyState"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:visibility="gone">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No favorites yet"
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Search movies..."
+            android:textColorHint="@color/text_hint"
             android:textColor="@color/text_primary"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:inputType="text"
+            android:paddingHorizontal="16dp"
+            android:background="@color/surface"
+            android:singleLine="true"/>
 
-        <TextView
-            android:id="@+id/tvEmpty"
+        <Button
+            android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start adding movies to your favorites!"
-            android:textColor="@color/text_secondary"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp"/>
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:text="Search"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/accent"/>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="No movies found"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        android:visibility="gone"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

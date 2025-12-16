@@ -29,8 +29,8 @@ public class SplashActivity extends AppCompatActivity {
         });
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+            startActivity(new Intent(SplashActivity.this, com.example.movielistapp.MainActivity.class));
             finish();
-        }, 2000); // 2 detik
+        }, 1500); // 1.5 seconds
     }
 }

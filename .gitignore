@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Claude Code
+.claude/
+
+# API Keys
+app/src/main/java/com/example/movielistapp/api/API.java

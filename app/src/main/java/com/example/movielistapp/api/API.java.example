@@ -1,0 +1,6 @@
+package com.example.movielistapp.api;
+
+public class API {
+    public static final String API_KEY = "YOUR_TMDB_API_KEY_HERE";
+    public static final String BASE_URL = "https://api.themoviedb.org/3/";
+}
